@@ -31,15 +31,12 @@ app.config(function($routeProvider) {
   $routeProvider
     .when('/admin/login', {
       template: '<admin-login></admin-login>',
-      controllerAs:'$ctrl',
       resolve: {
         currentAuth: routeResolvers.waitForAuth
       }
     })
     .when('/admin/results', {
-      controller: 'resultsCtrl',
-      templateUrl: 'admin/results.html',
-      controllerAs: 'vm',
+      template: '<results all-sessions="$resolve.allSessions"></results>',
       resolve: {
         admin: routeResolvers.requireAdmin,
         allSessions: routeResolvers.allSessions
