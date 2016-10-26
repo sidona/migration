@@ -3,14 +3,14 @@ angular.module('app').controller('homeCtrl',
     toastr, unreviewedSessionCount) {
       
       
-  this.currentUser = currentIdentity.currentUser
+  this.currentUser = currentIdentity.currentUser;
   this.userSessions = userSessions;
   
   this.setNextSessionToReview = function() {
     sessions.getNextUnreviewedSession(currentIdentity.currentUser.id).then(function(response) {
       this.currentSessionToReview = response.data;
     }.bind(this))
-  }
+  };
   this.setNextSessionToReview();
   
   
@@ -25,7 +25,7 @@ angular.module('app').controller('homeCtrl',
       // pull updated value
       unreviewedSessionCount.updateUnreviewedSessionCount();
     }.bind(this))
-  }
+  };
   
   this.voteNo = function() {
     sessions.addReviewedSession(this.currentUser.id, this.currentSessionToReview.id)
@@ -36,4 +36,4 @@ angular.module('app').controller('homeCtrl',
       unreviewedSessionCount.updateUnreviewedSessionCount();
     }.bind(this))
   }
-})
+});

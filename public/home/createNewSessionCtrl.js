@@ -9,8 +9,8 @@ angular.module('app').controller('createNewSessionCtrl',
       abstract: this.abstract,
       userFirstName: currentIdentity.currentUser.firstName,
       userLastName: currentIdentity.currentUser.lastName,
-      userId: currentIdentity.currentUser.id,
-    }
+      userId: currentIdentity.currentUser.id
+    };
     
     sessions.createNewSession(newUserSession).then(function(response) {
       console.log(response);
@@ -18,4 +18,4 @@ angular.module('app').controller('createNewSessionCtrl',
     }.bind(this))
 
   }
-})
+});

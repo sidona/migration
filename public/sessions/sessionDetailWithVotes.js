@@ -1,6 +1,6 @@
 angular.module('app').directive('sessionDetailWithVotes', function() {
   return {
-    templateUrl: '/sessions/sessionDetailWithVotes.html',
+    templateUrl: 'sessions/sessionDetailWithVotes.html',
     scope: {
       session: '=',
       initialCollapsed: '@'
@@ -10,4 +10,4 @@ angular.module('app').directive('sessionDetailWithVotes', function() {
     controller: function() {
     }
   }
-})
+});

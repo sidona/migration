@@ -12,11 +12,11 @@ angular.module('app').directive('unreviewedTalk', function() {
       
       this.yes = function() {
         this.voteYes();
-      }
+      };
       
       this.no = function() {
         this.voteNo();
       }
     }
   }
-})
+});
