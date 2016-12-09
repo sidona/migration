@@ -8,7 +8,7 @@ angular.module('app').directive('unreviewedTalk', function() {
     },
     controllerAs:'$ctrl',
     bindToController:true,
-    controller: function($) {
+    controller: function() {
       
       this.yes = function() {
         this.voteYes();
