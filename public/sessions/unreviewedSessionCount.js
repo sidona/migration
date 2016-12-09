@@ -8,4 +8,4 @@ angular.module('app').factory('unreviewedSessionCount', function(sessions, curre
       }.bind(this))
     }
   }
-})
+});

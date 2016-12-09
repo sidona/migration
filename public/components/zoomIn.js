@@ -1,7 +1,7 @@
 /**
  * Created by sdonose on 10/6/2016.
  */
-angular.module('app').directive('zoomIn', function() {
+angular.module('app').component('zoomIn', function() {
     return {
         restrict: 'A',
         link: function(scope, el, attrs) {
